@@ -5,6 +5,10 @@ __pycache__/
 
 # C extensions
 *.so
+.idea
+.idea/
+noisy_frames/out/
+noisy_frames/test_input
 
 # Distribution / packaging
 .Python
