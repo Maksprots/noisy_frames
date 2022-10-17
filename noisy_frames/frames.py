@@ -6,6 +6,8 @@ import conf
 class Frames:
     def __init__(self, video):
         self.video = cv2.VideoCapture(video)
+        self.width = self.video.get(3)
+        self.height = self.video.get(4)
         self.nuber_frames = int(self.video.get(cv2.CAP_PROP_FRAME_COUNT))
         self.fps = int(self.video.get(cv2.CAP_PROP_FPS)) +1
         self.__lst_frames =[]
@@ -25,4 +27,3 @@ class Frames:
         if len(self.__lst_frames) == 0:
             self.get_brightness_list()
         return self.__lst_frames
-
